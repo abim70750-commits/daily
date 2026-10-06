@@ -9,7 +9,7 @@ import 'models.dart';
   }
 
   final today = DateTime.now();
-  final start = DateTime(habit.dibuatPada);
+  final start = DateTime.fromMillisecondsSinceEpoch(habit.dibuatPada);
 
   int longest = 0;
   int run = 0;

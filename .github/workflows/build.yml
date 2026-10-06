@@ -93,6 +93,9 @@ jobs:
       - name: Flutter pub get
         run: flutter pub get
 
+      - name: Generate launcher icons
+        run: dart run flutter_launcher_icons
+
       - name: Build universal APK
         run: flutter build apk --release --target-platform android-arm,android-arm64,android-x64
 
