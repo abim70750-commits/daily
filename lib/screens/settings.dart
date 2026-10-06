@@ -79,7 +79,7 @@ class SettingsScreen extends StatelessWidget {
               ),
               title: Text(l.accentColor),
               subtitle: Text(
-                  '#${s.accent.toARGB32().toRadixString(16).padLeft(8, '0').substring(2).toUpperCase()}'),
+                  '#${s.accent.value.toRadixString(16).padLeft(8, '0').substring(2).toUpperCase()}'),
               onTap: () async {
                 Color picked = s.accent;
                 await showDialog(

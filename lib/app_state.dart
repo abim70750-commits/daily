@@ -29,7 +29,7 @@ class AppState extends ChangeNotifier {
   Future<void> setAccent(Color c) async {
     accent = c;
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setInt('accent', c.toARGB32());
+    await prefs.setInt('accent', c.value);
     notifyListeners();
   }
 
@@ -144,7 +144,7 @@ class AppState extends ChangeNotifier {
       'version': 1,
       'habits': habits.map((h) => h.toMap()).toList(),
       'logs': logs.map((l) => l.toMap()).toList(),
-      'accent': accent.toARGB32(),
+      'accent': accent.value,
       'themeMode': themeMode.index,
       'locale': locale?.languageCode,
     };
